@@ -1,4 +1,9 @@
 # Requires: Hyper-V feature enabled, admin PowerShell, Win11 ISO downloaded
+# Download the public Windows 11 multi-edition ISO (Home/Pro, no sign-in required):
+# 1. Open https://www.microsoft.com/en-us/software-download/windows11
+# 2. Under "Download Windows 11 Disk Image (ISO) for x64 devices", select the
+#    multi-edition ISO and language, then download the generated x64 link.
+# 3. Save or rename the ISO to the $ISOPath location below.
 
 $VMName   = "Win11-Enterprise-VM"
 $VMPath   = "D:\HyperV\$VMName"
