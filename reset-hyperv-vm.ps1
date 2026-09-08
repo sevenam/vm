@@ -3,7 +3,7 @@
 param(
     [Parameter()]
     [ValidateNotNullOrEmpty()]
-    [string]$VMName = "Win11-Enterprise-VM",
+    [string]$VMName = "Win11-VM",
 
     [Parameter()]
     [string]$SnapshotName

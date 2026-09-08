@@ -22,10 +22,25 @@ To use a different VM name, pass `-Name`:
 
 The VM files are stored under `D:\HyperV\<Name>`.
 
+## Start a VM
+
+Open PowerShell as Administrator. To start the default `Win11-VM` and open
+its console, run:
+
+```powershell
+.\start-hyperv-vm.ps1
+```
+
+To start a VM with a different name, pass `-Name`:
+
+```powershell
+.\start-hyperv-vm.ps1 -Name "My-Windows-VM"
+```
+
 ## Reset a VM to a snapshot
 
 Open PowerShell as Administrator. To restore the newest snapshot for the
-default `Win11-Enterprise-VM`:
+default `Win11-VM`:
 
 ```powershell
 .\reset-hyperv-vm.ps1

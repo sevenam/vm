@@ -4,7 +4,7 @@ param(
     [string]$SnapshotName = "Snapshot-$(Get-Date -Format 'yyyy-MM-dd_HH-mm-ss')"
 )
 
-$VMName = "Win11-Enterprise-VM"
+$VMName = "Win11-VM"
 
 $vm = Get-VM -Name $VMName -ErrorAction SilentlyContinue
 if (-not $vm) {
