@@ -37,6 +37,20 @@ To start a VM with a different name, pass `-Name`:
 .\start-hyperv-vm.ps1 -Name "My-Windows-VM"
 ```
 
+## Stop a VM
+
+Open PowerShell as Administrator. To stop the default `Win11-VM`, run:
+
+```powershell
+.\stop-hyperv-vm.ps1
+```
+
+To stop a VM with a different name, pass `-Name`:
+
+```powershell
+.\stop-hyperv-vm.ps1 -Name "My-Windows-VM"
+```
+
 ## Reset a VM to a snapshot
 
 Open PowerShell as Administrator. To restore the newest snapshot for the
