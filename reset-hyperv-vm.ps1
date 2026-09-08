@@ -15,6 +15,8 @@ if (-not $vm) {
     exit 1
 }
 
+$wasRunning = $vm.State -eq 'Running'
+
 $snapshots = @(Get-VMSnapshot -VMName $VMName)
 if ($snapshots.Count -eq 0) {
     Write-Error "VM '$VMName' has no snapshots to restore."
@@ -42,5 +44,9 @@ if ($vm.State -ne 'Off') {
 }
 
 Restore-VMSnapshot -VMName $VMName -Name $snapshot.Name -Confirm:$false
+
+if ($wasRunning) {
+    Start-VM -Name $VMName | Out-Null
+}
 
 Write-Host "VM '$VMName' was restored to snapshot '$($snapshot.Name)'."
