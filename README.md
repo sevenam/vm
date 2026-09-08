@@ -22,6 +22,30 @@ To use a different VM name, pass `-Name`:
 
 The VM files are stored under `D:\HyperV\<Name>`.
 
+## Reset a VM to a snapshot
+
+Open PowerShell as Administrator. To restore the newest snapshot for the
+default `Win11-Enterprise-VM`:
+
+```powershell
+.\reset-hyperv-vm.ps1
+```
+
+To restore a specific snapshot:
+
+```powershell
+.\reset-hyperv-vm.ps1 -SnapshotName "Snapshot-2026-09-08_12-00-00"
+```
+
+To use a different VM name, pass `-VMName`:
+
+```powershell
+.\reset-hyperv-vm.ps1 -VMName "My-Windows-VM" -SnapshotName "Before updates"
+```
+
+The script force-stops the VM if it is running, restores the selected
+checkpoint, and leaves the VM stopped.
+
 ## Delete a VM
 
 Open PowerShell as Administrator. To delete the default `Win11-VM`, run:
